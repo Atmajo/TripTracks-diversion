@@ -1,15 +1,49 @@
 import React from "react";
-import Navbar from "./Navbar";
+import { useParams } from "react-router-dom";
+import "../Style/Home.css";
 
-function Home() {
-  return (
-    <div>
-      <Navbar />
-      <div className="flex items-center m-10">
-        <h1 className=" text-5xl">Discover</h1>
+function Home({
+  Destinations,
+  Recommended,
+  Destination_week,
+  Reason,
+  Subscribe,
+  Footer,
+  User_output,
+  Search,
+  Navbar,
+}) {
+  const { tab } = useParams();
+  if (tab === "discover") {
+    return (
+      <div>
+        {Navbar}
+        {User_output}
+        {Search}
+        {Destinations}
+        {Recommended}
+        {Destination_week}
+        {Reason}
+        {Subscribe}
+        {Footer}
       </div>
-    </div>
-  );
+    );
+  } else if (tab === "planning") {
+    return (
+      <div>
+        {Navbar}
+        {User_output}
+        {Footer}
+      </div>
+    );
+  } else if (tab === "review") {
+    return (
+      <div>
+        {Navbar}
+        {User_output}
+        {Footer}
+      </div>
+    );
+  }
 }
 export default Home;
-

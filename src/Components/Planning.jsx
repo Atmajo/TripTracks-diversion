@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import User_output from "./User_output";
 
 const Planning = () => {
+  
   return (
     <div>
       <Navbar />
@@ -11,6 +12,7 @@ const Planning = () => {
         <h1 className="text-5xl">Planning</h1>
       </div>
     </div>
+    
   );
 };
 
